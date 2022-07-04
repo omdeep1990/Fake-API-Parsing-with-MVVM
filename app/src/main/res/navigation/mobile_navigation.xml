@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.omdeep.myapplication.ui.fragments.comments.CommentFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.omdeep.myapplication.ui.fragments.posts.PostFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.omdeep.myapplication.ui.fragments.albums.AlbumFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/to_dos"
+        android:name="com.omdeep.myapplication.ui.fragments.toDos.ToDoFragment"
+        android:label="ToDo"
+        tools:layout="@layout/fragment_to_do"/>
+
+    <fragment
+        android:id="@+id/users"
+        android:name="com.omdeep.myapplication.ui.fragments.users.UserFragment"
+        android:label="User"
+        tools:layout="@layout/fragment_user"/>
+
+    <fragment
+        android:id="@+id/photoes"
+        android:name="com.omdeep.myapplication.ui.fragments.photoes.PhotoFragment"
+        android:label="Photoes"
+        tools:layout="@layout/fragment_photo"/>
+</navigation>
