@@ -1,5 +1,6 @@
 package com.omdeep.myapplication.network
 
+import com.omdeep.myapplication.model.commentModel.JsonByComment
 import com.omdeep.myapplication.model.postModel.JsonByPosts
 import retrofit2.Call
 import retrofit2.Retrofit
@@ -11,6 +12,9 @@ interface RetrofitServices {
 
     @GET("posts")
     fun getAllPosts() : Call<JsonByPosts>
+
+    @GET("comments")
+    fun getAllComments() : Call<JsonByComment>
 
     companion object {
         const val BASE_URL = "https://jsonplaceholder.typicode.com/"
