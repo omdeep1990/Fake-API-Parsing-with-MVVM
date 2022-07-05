@@ -2,8 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/api_parsing"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="@string/photo"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/omdb_movies"
+        android:orderInCategory="100"
+        android:title="@string/omDb_movies"
         app:showAsAction="never" />
 </menu>

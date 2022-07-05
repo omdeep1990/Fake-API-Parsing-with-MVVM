@@ -36,13 +36,13 @@ class UserFragment : Fragment() {
         mainViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
 
-
+       // Inflate the layout for this fragment
         _binding = FragmentUserBinding.inflate(layoutInflater, container, false)
         val root: View = binding.root
 
         //TODO: MyPost Data Display Screen
         binding.recyclerView.layoutManager = GridLayoutManager(context, 1)
-        // Inflate the layout for this fragment
+
 
         mainViewModel.getAllUsers().observe(viewLifecycleOwner, Observer {
             adapter = UserAdapter(it)

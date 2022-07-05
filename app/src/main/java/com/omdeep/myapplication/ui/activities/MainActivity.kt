@@ -1,7 +1,9 @@
 package com.omdeep.myapplication.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -39,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.to_dos, R.id.users, R.id.photoes
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.to_dos, R.id.users, R.id.api_parsing
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -51,6 +53,28 @@ class MainActivity : AppCompatActivity() {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.api_parsing -> {
+                startActivity(Intent(this, MovieActivity::class.java))
+                true
+            }
+//            R.id.omdb_movies -> {
+////                mMap.mapType = GoogleMap.MAP_TYPE_HYBRID
+//                true
+//            }
+//            R.id.satellite_map -> {
+//                mMap.mapType = GoogleMap.MAP_TYPE_SATELLITE
+//                true
+//            }
+//            R.id.terrain_map -> {
+//                mMap.mapType = GoogleMap.MAP_TYPE_TERRAIN
+//                true
+//            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {

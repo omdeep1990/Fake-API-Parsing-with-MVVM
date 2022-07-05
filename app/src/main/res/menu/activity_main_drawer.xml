@@ -27,10 +27,6 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="Users"/>
 
-<!--        <item-->
-<!--            android:id="@+id/photoes"-->
-<!--            android:icon="@drawable/ic_menu_slideshow"-->
-<!--            android:title="Photoes"/>-->
     </group>
 
 </menu>

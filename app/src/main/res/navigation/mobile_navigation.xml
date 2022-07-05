@@ -36,8 +36,9 @@
         tools:layout="@layout/fragment_user"/>
 
     <fragment
-        android:id="@+id/photoes"
+        android:id="@+id/photo"
         android:name="com.omdeep.myapplication.ui.fragments.photoes.PhotoFragment"
-        android:label="Photoes"
+        android:label="Photo"
         tools:layout="@layout/fragment_photo"/>
+
 </navigation>
